@@ -49,15 +49,17 @@ const ModalRegister = () => {
         preventClose={isLoading}
       >
         <Modal.Header>
-          <Text id="modal-title" size={18}>
-            Welcome to{" "}
-            <Text b size={18} className="font-josef">
-              htci.
+          <div className="flex-col space-y-4">
+            <Text id="modal-title" size={18}>
+              Welcome to{" "}
+              <Text b size={18} className="font-josef">
+                htci.
+              </Text>
             </Text>
-          </Text>
-          <Text id="modal-title" size={14}>
-            Silahkan mendaftarkan diri anda:
-          </Text>
+            <Text id="modal-title" size={14}>
+              Silahkan mendaftarkan diri anda:
+            </Text>
+          </div>
         </Modal.Header>
         <Modal.Body>
           <Input

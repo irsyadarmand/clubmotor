@@ -37,6 +37,7 @@ const uiSlice = createSlice({
     },
     closeModal: (state) => {
       state.modalLogin = false;
+      state.modalRegister = false;
       state.modalLogout = false;
     },
     setShowSidebar: (state, action) => {
