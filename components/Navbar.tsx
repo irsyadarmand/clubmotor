@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAppDispatch, useAppSelector } from "@/core/redux/hooks";
 import { selectAuth } from "@/core/redux/slices/auth";
-import { setModalLogin, setModalLogout } from "@/core/redux/slices/ui/uiSlice";
+import { setModalLogin, setModalLogout, setModalRegister } from "@/core/redux/slices/ui/uiSlice";
 import { useState } from "react";
 import CustomButton from "./Button";
 
@@ -68,12 +68,20 @@ const Navbar = () => {
                 <div className="block">{hover ? "Logout" : user.name}</div>
               </button>
             ) : (
-              <button
+              <>
+                <button
+                onClick={() => dispatch(setModalRegister())}
+                className="py-4 mx-4 items-center inline-flex text-black border-b-2 border-transparent hover:text-gray-600 hover:border-blue ease-linear transition-all duration-400"
+              >
+                <div className="block">Register</div>
+              </button>
+                <button
                 onClick={() => dispatch(setModalLogin())}
                 className="py-4 mx-4 items-center inline-flex text-black border-b-2 border-transparent hover:text-gray-600 hover:border-blue ease-linear transition-all duration-400"
               >
                 <div className="block">Login</div>
               </button>
+                </>
             )}
           </div>
         </div>
