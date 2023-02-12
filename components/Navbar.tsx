@@ -68,7 +68,7 @@ const Navbar = () => {
                 <div className="block">{hover ? "Logout" : user.name}</div>
               </button>
             ) : (
-              <>
+              <div className="flex space-x-4">
                 <button
                 onClick={() => dispatch(setModalRegister())}
                 className="py-4 mx-4 items-center inline-flex text-black border-b-2 border-transparent hover:text-gray-600 hover:border-blue ease-linear transition-all duration-400"
@@ -81,7 +81,7 @@ const Navbar = () => {
               >
                 <div className="block">Login</div>
               </button>
-                </>
+                </div>
             )}
           </div>
         </div>
